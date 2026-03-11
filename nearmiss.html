@@ -1,18 +1,172 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Equipment Details</title>
+<title>Near Miss Reporting</title>
+
 <style>
-body{font-family:Arial;text-align:center;background:#f2f2f2;}
-a{display:block;margin:20px auto;width:300px;padding:15px;background:#0b6efd;color:white;text-decoration:none;border-radius:8px;}
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+background-image:url("nearmiss-bg.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+.overlay{
+background:rgba(255,255,255,0.85);
+min-height:100vh;
+padding-top:30px;
+}
+
+/* IOCL logo */
+
+.logo{
+width:120px;
+margin-bottom:10px;
+}
+
+/* language buttons */
+
+.lang-btn{
+display:block;
+width:260px;
+margin:20px auto;
+padding:15px;
+background:#0b6efd;
+color:white;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* container */
+
+.container{
+max-width:450px;
+margin:auto;
+padding:20px;
+}
+
+/* domino graphic */
+
+.domino{
+width:280px;
+margin:20px auto;
+display:block;
+}
+
+/* animated warning */
+
+.icon{
+font-size:70px;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+/* report button */
+
+.report-btn{
+display:block;
+margin:30px auto;
+width:300px;
+padding:18px;
+background:#ff6a00;
+color:white;
+font-size:20px;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
 </style>
+
+
+<script>
+
+function selectLanguage(lang){
+
+document.getElementById("langPage").style.display="none";
+document.getElementById("contentPage").style.display="block";
+
+if(lang=="en"){
+document.getElementById("title").innerHTML="NEAR MISS";
+document.getElementById("text").innerHTML="Unsafe situation that could cause an accident.";
+document.getElementById("button").innerHTML="REPORT NEAR MISS";
+}
+
+if(lang=="hi"){
+document.getElementById("title").innerHTML="नियर मिस";
+document.getElementById("text").innerHTML="ऐसी असुरक्षित स्थिति जिससे दुर्घटना हो सकती थी।";
+document.getElementById("button").innerHTML="नियर मिस रिपोर्ट करें";
+}
+
+if(lang=="bn"){
+document.getElementById("title").innerHTML="নিয়ার মিস";
+document.getElementById("text").innerHTML="এমন ঝুঁকিপূর্ণ পরিস্থিতি যা দুর্ঘটনা ঘটাতে পারত।";
+document.getElementById("button").innerHTML="নিয়ার মিস রিপোর্ট করুন";
+}
+
+}
+
+</script>
+
 </head>
+
+
 
 <body>
 
-<h1>NEAR MISS</h1>
+<div class="overlay">
 
-<a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=B0Xxorf6hUGfjbuyZc4E5ebXGY-Zd0hEiB-jbmNC3fhUMkgxVDlEMjBETDk2NzBJWURIMkNLWlNYUi4u&origin=QRCode" target="_blank">CLICK HERE TO REPORT NEAR MISS</a>
+<!-- LANGUAGE PAGE -->
+
+<div id="langPage">
+
+<img src="iocl.png" class="logo">
+
+<h2>Select Language</h2>
+
+<div class="lang-btn" onclick="selectLanguage('en')">English</div>
+<div class="lang-btn" onclick="selectLanguage('hi')">हिंदी</div>
+<div class="lang-btn" onclick="selectLanguage('bn')">বাংলা</div>
+
+</div>
+
+
+<!-- CONTENT PAGE -->
+
+<div id="contentPage" style="display:none">
+
+<img src="iocl.png" class="logo">
+
+<div class="container">
+
+<h1 id="title"></h1>
+
+<div class="icon">⚠️</div>
+
+<p id="text"></p>
+
+<img src="nm.jpg" class="domino">
+
+<a id="button" class="report-btn"
+href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=B0Xxorf6hUGfjbuyZc4E5ebXGY-Zd0hEiB-jbmNC3fhUMkgxVDlEMjBETDk2NzBJWURIMkNLWlNYUi4u&origin=QRCode"
+target="_blank">
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
