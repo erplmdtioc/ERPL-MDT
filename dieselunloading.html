@@ -1,8 +1,183 @@
-<!-- EQUIPMENT ROW -->
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>DIESEL UNLOADING UNIT</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background-image:url("background.jpeg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+.overlay{
+background:rgba(255,255,255,0.85);
+min-height:100vh;
+padding-bottom:40px;
+}
+
+.header{
+text-align:center;
+padding:25px;
+}
+
+.logo{
+width:110px;
+}
+
+h1{
+color:#002060;
+margin-top:10px;
+font-size:36px;
+}
+
+.container{
+width:1100px;
+margin:auto;
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.card{
+width:320px;
+background:#fff9db;
+border-radius:12px;
+border-top:5px solid #f57c00;
+box-shadow:0 6px 15px rgba(0,0,0,0.25);
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h2{
+background:#0b6efd;
+color:white;
+margin:0;
+padding:12px;
+font-size:20px;
+}
+
+.specs{
+padding:15px;
+text-align:left;
+}
+
+.specs p{
+margin:6px 0;
+font-size:16px;
+}
+
+.button{
+display:inline-block;
+margin-top:10px;
+padding:10px 14px;
+background:#0b6efd;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.button:hover{
+background:#084298;
+}
+
+.section-title{
+text-align:center;
+font-size:26px;
+color:#002060;
+margin-top:20px;
+margin-bottom:20px;
+}
+
+/* POPUP WINDOW */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+width:700px;
+padding:25px;
+border-radius:10px;
+text-align:left;
+}
+
+.popup img{
+width:100%;
+margin-top:15px;
+}
+
+.close{
+float:right;
+cursor:pointer;
+font-size:20px;
+font-weight:bold;
+color:red;
+}
+
+</style>
+
+<script>
+
+function openPopup(id){
+document.getElementById(id).style.display="flex";
+}
+
+function closePopup(id){
+document.getElementById(id).style.display="none";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="header">
+
+<img src="iocl.png" class="logo">
+
+<h1>DIESEL UNLOADING UNIT</h1>
+
+</div>
+
+
+<!-- EQUIPMENT SECTION -->
+
+<div class="section-title">Equipment</div>
 
 <div class="container">
-
-<!-- DIESEL UNLOADING PUMP -->
 
 <div class="card">
 
@@ -21,8 +196,6 @@
 
 </div>
 
-
-<!-- PUMP MOTOR -->
 
 <div class="card">
 
@@ -44,14 +217,13 @@
 </div>
 
 
-<!-- PROCEDURE ROW -->
+
+<!-- PROCEDURE SECTION -->
+
+<div class="section-title">Operating Procedures</div>
 
 <div class="container">
-  <h2 style="text-align:center;margin-top:40px;color:#002060;">
-Operating Procedures
-</h2>
 
-<!-- OPERATION 1 -->
 
 <div class="card">
 
@@ -72,8 +244,6 @@ View Procedure
 </div>
 
 
-<!-- OPERATION 2 -->
-
 <div class="card">
 
 <img src="dstmainline.jpeg">
@@ -92,8 +262,6 @@ View Procedure
 
 </div>
 
-
-<!-- OPERATION 3 -->
 
 <div class="card">
 
@@ -114,3 +282,73 @@ View Procedure
 </div>
 
 </div>
+
+</div>
+
+
+
+<!-- POPUPS -->
+
+<div id="p1" class="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup('p1')">X</span>
+
+<h2>Diesel Unloading from Tanker</h2>
+
+<p>
+1. Position tanker at unloading bay.<br>
+2. Connect unloading hose to tanker outlet.<br>
+3. Open tanker outlet valve.<br>
+4. Open suction valve of unloading pump.<br>
+5. Start diesel unloading pump.<br>
+6. Monitor level of 80KL tank.<br>
+7. Stop pump after unloading complete.
+</p>
+
+<img src="schematic1.jpeg">
+
+</div>
+</div>
+
+
+<div id="p2" class="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup('p2')">X</span>
+
+<h2>Filling Mainline Engine DST</h2>
+
+<p>
+1. Ensure sufficient level in 80KL tank.<br>
+2. Open discharge valve towards mainline DST.<br>
+3. Start diesel transfer pump.<br>
+4. Monitor DST level.<br>
+5. Stop pump after required level reached.
+</p>
+
+<img src="schematic2.jpeg">
+
+</div>
+</div>
+
+
+<div id="p3" class="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup('p3')">X</span>
+
+<h2>Filling Fire Fighting Engine DST</h2>
+
+<p>
+1. Check diesel level in storage tank.<br>
+2. Open line towards fire engine DST.<br>
+3. Start unloading pump.<br>
+4. Monitor tank level.<br>
+5. Stop pump after filling complete.
+</p>
+
+<img src="schematic3.jpeg">
+
+</div>
+</div>
+
+</body>
+</html>
