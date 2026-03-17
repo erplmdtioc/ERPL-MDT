@@ -231,11 +231,11 @@ document.getElementById(id).style.display="none";
 
 <img src="unload.jpeg">
 
-<h2>Tanker → 80KL Tank</h2>
+<h2>HSD Tanker → 80KL HSD Tank</h2>
 
 <div class="specs">
 
-<p>Diesel unloading from tanker to storage tank.</p>
+<p>Diesel unloading from HSD Tanker to 80KL HSD Tank.</p>
 
 <div class="button" onclick="openPopup('p1')">
 View Procedure
@@ -250,11 +250,11 @@ View Procedure
 
 <img src="dstmainline.jpeg">
 
-<h2>80KL → Mainline DST</h2>
+<h2>80KL HSD Tank → Mainline Engine DST</h2>
 
 <div class="specs">
 
-<p>Filling DST of mainline engines.</p>
+<p>Filling DSTs of Mainline Engines.</p>
 
 <div class="button" onclick="openPopup('p2')">
 View Procedure
@@ -269,11 +269,11 @@ View Procedure
 
 <img src="dstff.jpeg">
 
-<h2>80KL → Fire Engine DST</h2>
+<h2>80KL HSD Tank → Fire Fighting Engine/ Diesel Generator DST</h2>
 
 <div class="specs">
 
-<p>Filling DST of fire fighting engines.</p>
+<p>Filling DSTs of Fire Fighting Engines/ Diesel Generator.</p>
 
 <div class="button" onclick="openPopup('p3')">
 View Procedure
@@ -295,16 +295,15 @@ View Procedure
 <div class="popup-content">
 <span class="close" onclick="closePopup('p1')">X</span>
 
-<h2>Diesel Unloading from Tanker</h2>
+<h2>HSD Unloading from Tanker</h2>
 
 <p>
-1. Position tanker at unloading bay.<br>
-2. Connect unloading hose to tanker outlet.<br>
-3. Open tanker outlet valve.<br>
-4. Open suction valve of unloading pump.<br>
-5. Start diesel unloading pump.<br>
-6. Monitor level of 80KL tank.<br>
-7. Stop pump after unloading complete.
+1. Connect the suction hose to the tank lorry outlet.<br>
+2. Ensure proper earthling of tank lorry to avoid charge accumulation.<br>
+3. Ensure HOV-5 & 6 in closed condition.<br>
+4. Open HOV-1 & tank lorry outlet valve and vent air through needle valve.<br>
+5. Ensure HOV-1, 2 & 3 in open condition.<br>
+6. Start the Pump motor by green push button.<br>
 </p>
 
 <img src="schematic1.jpeg">
@@ -320,11 +319,14 @@ View Procedure
 <h2>Filling Mainline Engine DST</h2>
 
 <p>
-1. Ensure sufficient level in 80KL tank.<br>
-2. Open discharge valve towards mainline DST.<br>
-3. Start diesel transfer pump.<br>
-4. Monitor DST level.<br>
-5. Stop pump after required level reached.
+1. Ensure HOV-1, 2 &3 are in closed condition.<br>
+2. Ensure that the Level shown in DST Tank in the SCADA is less than 4 KL and Also ensure level is below high level' in the level indicator tube in the DST..<br>
+3. Open HOV-4, 5,6 & 7 with Respective DST inlet valve of MLPU.<br>
+4. Ensure HOV-8 is in close condition.<br>
+5. Ensure proper venting of pump before starting.<br>
+6. Start the pump by green push button.<br>
+7. While running the pump, continuous close monitoring to be done by one person so that the DST tank is not filled beyond 4 KL (High level mark in level tube).<br>
+8. Pump to be stopped before it reaches 4 KL (high level mark), to avoid overflow.
 </p>
 
 <img src="schematic2.jpeg">
@@ -337,14 +339,14 @@ View Procedure
 <div class="popup-content">
 <span class="close" onclick="closePopup('p3')">X</span>
 
-<h2>Filling Fire Fighting Engine DST</h2>
+<h2>Filling Fire Fighting Engine/ Diesel Generator DST</h2>
 
 <p>
-1. Check diesel level in storage tank.<br>
-2. Open line towards fire engine DST.<br>
-3. Start unloading pump.<br>
-4. Monitor tank level.<br>
-5. Stop pump after filling complete.
+1. Ensure HOV-1, 2 & 3 are in closed condition.<br>
+2. Open HOV-4, 5,6 & 8 with Respective DST inlet valve of DG-1/DG-2/FF-4/FF-5.<br>
+3. Monitor the respective DST level for top-up.<br>
+4. Ensure proper venting of pump before starting.<br>
+5. Start the pump by green push button. While running the pump, continuous close monitoring to be done by one person and fill up to safe filling height of respective DST.
 </p>
 
 <img src="schematic3.jpeg">
