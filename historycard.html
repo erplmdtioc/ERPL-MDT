@@ -83,19 +83,11 @@ margin-top:0;
 color:#002060;
 }
 
-.openBtn{
-padding:12px 25px;
-background:#198754;
-color:white;
+iframe{
+width:100%;
+height:600px;
 border:none;
 border-radius:8px;
-cursor:pointer;
-font-size:16px;
-transition:0.3s;
-}
-
-.openBtn:hover{
-background:#157347;
 }
 
 </style>
@@ -109,9 +101,7 @@ document.getElementById("viewer").style.display="block";
 
 document.getElementById("title").innerText = name;
 
-document.getElementById("openBtn").onclick = function(){
-window.open(link);
-}
+document.getElementById("excelFrame").src = link;
 
 }
 
@@ -136,31 +126,9 @@ window.open(link);
 
 <div class="button-container">
 
-<button onclick="showSheet('ACB-1','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQAhKv-BezntRZ3dOPyEFGFZAVBWgdyB-EbcEZS3fYSZW5I?e=RVtf4h')">ACB-1</button>
-<button onclick="showSheet('ACB-2','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQAfdmydjyx9RpfBudwsnL5uAb8wHh7PS_HW94cta1ive5M?e=Uuyqwb')">ACB-2</button>
+<button onclick="showSheet('ACB-1','https://indianoilworkplace-my.sharepoint.com/...')">ACB-1</button>
 
-<button onclick="showSheet('AC-01','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQCkQO9uq2fcSJT71OSxNk0-ASNMpjtX-drGF6ovoWYkfQw?e=66ccBa')">AC-01</button>
-<button onclick="showSheet('AC-02','https://indianoilworkplace-my.sharepoint.com/:f:/g/personal/dasbj1_indianoil_in/IgB-L38mO9U2TbWbuCHd2hu_AVqf-XIOh8kKILIjZghrMak?e=p0WnYd')">AC-02</button>
-<button onclick="showSheet('AC-03','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQCbA7xHp2HsR7R9tPyoXbsZAdvTgWWk2M8eTRSJ8VzeE2Y?e=w2jcbQ')">AC-03</button>
-
-<button onclick="showSheet('DG-01','https://indianoilworkplace-my.sharepoint.com/:f:/g/personal/dasbj1_indianoil_in/IgAReROTc0L2QpyVOK9FPuIbAaR13ooh-bZkrFRlrqfI1IY?e=Mezagj')">DG-01</button>
-<button onclick="showSheet('DG-02','https://indianoilworkplace-my.sharepoint.com/:f:/g/personal/dasbj1_indianoil_in/IgBsAMDKZwSXTrJ2XWeseZ08Ab6Xn52c137a0VXN0uP_1G4?e=SEu7lN')">DG-02</button>
-
-<button onclick="showSheet('MP-01','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQAGfO6zyEsZT6_BkHs_7Hp5AY4Yqtzz8j3iFoqVxANtffo?e=jzFadf')">MP-01</button>
-<button onclick="showSheet('MP-02','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQCHzT4rnwfFSbNep-IMYVKFAeKrhwLmcowwtnabDAERJaU?e=po2Ydp')">MP-02</button>
-<button onclick="showSheet('MP-03','https://indianoilworkplace-my.sharepoint.com/:f:/g/personal/dasbj1_indianoil_in/IgCH5A-dk_CrRryrr8ucN9R4AYm3XAGm-w2hN8hJCB09UpU?e=WqC5N2')">MP-03</button>
-
-<button onclick="showSheet('FF-04','https://indianoilworkplace-my.sharepoint.com/:f:/g/personal/dasbj1_indianoil_in/IgBWxHTRYhSYSKQJWYT0CbnPASXKJGNlt_L47LuuCOHB6F4?e=FJpYqV')">FF-04</button>
-<button onclick="showSheet('FF-05','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQD3kfqp6CbPR6d0nMWdk7KdAdAY5TnbIwIeuFZ9WJ0ZYgU?e=4UfWl6')">FF-05</button>
-
-<button onclick="showSheet('PMCC-01','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQC6iGits-a3RZBvQyQ99LeYASaLd03slhCpblnyfeIjeIU?e=g4w8pK')">PMCC-01</button>
-<button onclick="showSheet('PMCC-02','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQACG2MZP7nFSqVtXNnkQwUEAQuYYZUPMskXuhnf7bPwPus?e=4tJMLj')">PMCC-02</button>
-
-<button onclick="showSheet('SUMP PUMP MOTOR','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQChNKXtdlixRISPFmyvsEhcAbaBV5Ad1SKSSKnLC_gai1E?e=HSKrm6')">SUMP PUMP MOTOR</button>
-<button onclick="showSheet('TRANSFORMER','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQD-x0QVfEwzRpqPvssDtTArAb0UTVbFiYa5i1UEJu3w2lQ?e=0FIiiQ')">TRANSFORMER</button>
-
-<button onclick="showSheet('VCB','https://indianoilworkplace-my.sharepoint.com/:x:/g/personal/dasbj1_indianoil_in/IQBzfTXj-9_PSYE_vaCtBoLiATs6m_3cQBv36tBxv6Btigo?e=S1ShdF')">VCB</button>
-
+<!-- KEEP YOUR EXISTING BUTTONS (NO CHANGE REQUIRED) -->
 
 </div>
 
@@ -173,9 +141,7 @@ window.open(link);
 
 <br>
 
-<button class="openBtn" id="openBtn">
-Open Excel Sheet
-</button>
+<iframe id="excelFrame"></iframe>
 
 </div>
 
