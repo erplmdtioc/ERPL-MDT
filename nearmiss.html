@@ -7,46 +7,96 @@
 <style>
 
 body{
-font-family:Arial;
-background:#f4f6f9;
+margin:0;
+font-family:Arial, sans-serif;
+background-image:url("background.jpeg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+.overlay{
+background:rgba(255,255,255,0.85);
+min-height:100vh;
+padding-bottom:40px;
+}
+
+.header{
 text-align:center;
-margin-top:120px;
+padding:25px;
+}
+
+.logo{
+width:110px;
+}
+
+h1{
+color:#002060;
+margin-top:10px;
+font-size:36px;
 }
 
 .container{
-background:white;
-width:500px;
+width:600px;
 margin:auto;
+text-align:center;
+}
+
+.card{
+background:white;
 padding:40px;
 border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
+margin-top:30px;
 }
 
 button{
 padding:15px 30px;
 font-size:18px;
+border:none;
 background:#d62828;
 color:white;
-border:none;
 border-radius:8px;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
 background:#a4161a;
+transform:translateY(-2px);
 }
 
 </style>
+
+<script>
+
+function openForm(){
+window.open("https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=B0Xxorf6hUGfjbuyZc4E5ebXGY-Zd0hEiB-jbmNC3fhUMkgxVDlEMjBETDk2NzBJWURIMkNLWlNYUi4u");
+}
+
+</script>
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="overlay">
+
+<div class="header">
+
+<img src="iocl.png" class="logo">
 
 <h1>NEAR MISS REPORTING</h1>
 
-<p>Please report any Near Miss incidents for improving safety.</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Report Near Miss Incident</h2>
+
+<p>Please report any Near Miss incidents to improve workplace safety.</p>
 
 <br>
 
@@ -54,13 +104,9 @@ background:#a4161a;
 
 </div>
 
-<script>
+</div>
 
-function openForm(){
-window.open("YOUR_FORM_LINK","_blank");
-}
-
-</script>
+</div>
 
 </body>
 
