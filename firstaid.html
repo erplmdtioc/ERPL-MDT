@@ -29,6 +29,7 @@ margin:auto;
 h1{
 text-align:center;
 color:#002060;
+margin-bottom:30px;
 }
 
 table{
@@ -51,18 +52,32 @@ background:#002060;
 color:white;
 }
 
+.form-box{
+width:500px;
+margin:40px auto;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
 input{
 width:100%;
-padding:5px;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
 }
 
 button{
 background:#0b6efd;
 color:white;
 border:none;
-padding:5px 10px;
+padding:12px;
+width:100%;
+border-radius:8px;
+font-size:16px;
 cursor:pointer;
-border-radius:5px;
 }
 
 button:hover{
@@ -73,20 +88,26 @@ background:#084298;
 
 <script>
 
-function sendMail(item){
+function sendMail(){
 
-var name = document.getElementById("user_"+item).value;
+var item = document.getElementById("item").value;
+var qty = document.getElementById("qty").value;
+var name = document.getElementById("name").value;
+var location = document.getElementById("location").value;
 
-if(name==""){
-alert("Please enter name");
+if(item=="" || qty=="" || name=="" || location==""){
+alert("Please fill all fields");
 return;
 }
 
 var subject = "First Aid Box Item Used";
 
-var body = "Item Used : "+item+"%0D%0AUsed By : "+name;
+var body = "First Aid Item Used : " + item +
+"%0D%0AQuantity : " + qty +
+"%0D%0AUsed By : " + name +
+"%0D%0AFirst Aid Location : " + location;
 
-window.location.href="mailto:dasbj1@indianoil.in?subject="+subject+"&body="+body;
+window.location.href="mailto:yourmail@indianoil.in?subject="+subject+"&body="+body;
 
 }
 
@@ -109,166 +130,47 @@ window.location.href="mailto:dasbj1@indianoil.in?subject="+subject+"&body="+body
 <th>Contents</th>
 <th>Requirement</th>
 <th>Available</th>
-<th>Last Used By</th>
-<th>Submit</th>
 </tr>
 
-<tr>
-<td>1</td>
-<td>Small size sterilised dressings</td>
-<td>12 Nos</td>
-<td>12 Nos</td>
-<td><input id="user_1"></td>
-<td><button onclick="sendMail('Small size sterilised dressings')">Submit</button></td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>Medium size sterilised dressings</td>
-<td>6 Nos</td>
-<td>6 Nos</td>
-<td><input id="user_2"></td>
-<td><button onclick="sendMail('Medium size sterilised dressings')">Submit</button></td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>Large size sterilised dressings</td>
-<td>6 Nos</td>
-<td>6 Nos</td>
-<td><input id="user_3"></td>
-<td><button onclick="sendMail('Large size sterilised dressings')">Submit</button></td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>Large size sterilised burn dressings</td>
-<td>6 Nos</td>
-<td>6 Nos</td>
-<td><input id="user_4"></td>
-<td><button onclick="sendMail('Burn dressings')">Submit</button></td>
-</tr>
-
-<tr>
-<td>5</td>
-<td>Sterilized cotton wool</td>
-<td>6 Nos</td>
-<td>6 Nos</td>
-<td><input id="user_5"></td>
-<td><button onclick="sendMail('Cotton wool')">Submit</button></td>
-</tr>
-
-<tr>
-<td>6</td>
-<td>Antiseptic Solution</td>
-<td>2 Bottle</td>
-<td>2 Bottle</td>
-<td><input id="user_6"></td>
-<td><button onclick="sendMail('Antiseptic Solution')">Submit</button></td>
-</tr>
-
-<tr>
-<td>7</td>
-<td>Salvolatile</td>
-<td>1 No</td>
-<td>1 No</td>
-<td><input id="user_7"></td>
-<td><button onclick="sendMail('Salvolatile')">Submit</button></td>
-</tr>
-
-<tr>
-<td>8</td>
-<td>Mercurochrome</td>
-<td>1 No</td>
-<td>1 No</td>
-<td><input id="user_8"></td>
-<td><button onclick="sendMail('Mercurochrome')">Submit</button></td>
-</tr>
-
-<tr>
-<td>9</td>
-<td>Scissors</td>
-<td>1 No</td>
-<td>1 No</td>
-<td><input id="user_9"></td>
-<td><button onclick="sendMail('Scissors')">Submit</button></td>
-</tr>
-
-<tr>
-<td>10</td>
-<td>Adhesive plaster</td>
-<td>2 Rolls</td>
-<td>2 Rolls</td>
-<td><input id="user_10"></td>
-<td><button onclick="sendMail('Adhesive plaster')">Submit</button></td>
-</tr>
-
-<tr>
-<td>11</td>
-<td>Sterilized eye pads</td>
-<td>8 Pieces</td>
-<td>8 Pieces</td>
-<td><input id="user_11"></td>
-<td><button onclick="sendMail('Eye pads')">Submit</button></td>
-</tr>
-
-<tr>
-<td>12</td>
-<td>Tourniquet</td>
-<td>1 No</td>
-<td>1 No</td>
-<td><input id="user_12"></td>
-<td><button onclick="sendMail('Tourniquet')">Submit</button></td>
-</tr>
-
-<tr>
-<td>13</td>
-<td>Aspirin Tablets</td>
-<td>100 Tabs</td>
-<td>100 Tabs</td>
-<td><input id="user_13"></td>
-<td><button onclick="sendMail('Aspirin')">Submit</button></td>
-</tr>
-
-<tr>
-<td>14</td>
-<td>Polythene wash bottle</td>
-<td>1 Bottle</td>
-<td>1 Bottle</td>
-<td><input id="user_14"></td>
-<td><button onclick="sendMail('Wash bottle')">Submit</button></td>
-</tr>
-
-<tr>
-<td>15</td>
-<td>Snake bite lancet</td>
-<td>1 No</td>
-<td>1 No</td>
-<td><input id="user_15"></td>
-<td><button onclick="sendMail('Snake bite lancet')">Submit</button></td>
-</tr>
-
-<tr>
-<td>16</td>
-<td>Potassium permanganate</td>
-<td>1 Bottle</td>
-<td>1 Bottle</td>
-<td><input id="user_16"></td>
-<td><button onclick="sendMail('Potassium permanganate')">Submit</button></td>
-</tr>
-
-<tr>
-<td>17</td>
-<td>First Aid Leaflet</td>
-<td>1 Nos</td>
-<td>1 Nos</td>
-<td><input id="user_17"></td>
-<td><button onclick="sendMail('First aid leaflet')">Submit</button></td>
-</tr>
+<tr><td>1</td><td>Small size sterilised dressings</td><td>12 Nos</td><td>12 Nos</td></tr>
+<tr><td>2</td><td>Medium size sterilised dressings</td><td>6 Nos</td><td>6 Nos</td></tr>
+<tr><td>3</td><td>Large size sterilised dressings</td><td>6 Nos</td><td>6 Nos</td></tr>
+<tr><td>4</td><td>Large size sterilised burn dressings</td><td>6 Nos</td><td>6 Nos</td></tr>
+<tr><td>5</td><td>Sterilized cotton wool</td><td>6 Nos</td><td>6 Nos</td></tr>
+<tr><td>6</td><td>Antiseptic Solution</td><td>2 Bottle</td><td>2 Bottle</td></tr>
+<tr><td>7</td><td>Salvolatile</td><td>1 No</td><td>1 No</td></tr>
+<tr><td>8</td><td>Mercurochrome</td><td>1 No</td><td>1 No</td></tr>
+<tr><td>9</td><td>Scissors</td><td>1 No</td><td>1 No</td></tr>
+<tr><td>10</td><td>Adhesive plaster</td><td>2 Rolls</td><td>2 Rolls</td></tr>
+<tr><td>11</td><td>Sterilized eye pads</td><td>8 Pieces</td><td>8 Pieces</td></tr>
+<tr><td>12</td><td>Tourniquet</td><td>1 No</td><td>1 No</td></tr>
+<tr><td>13</td><td>Aspirin Tablets</td><td>100 Tabs</td><td>100 Tabs</td></tr>
+<tr><td>14</td><td>Polythene wash bottle</td><td>1 Bottle</td><td>1 Bottle</td></tr>
+<tr><td>15</td><td>Snake bite lancet</td><td>1 No</td><td>1 No</td></tr>
+<tr><td>16</td><td>Potassium permanganate</td><td>1 Bottle</td><td>1 Bottle</td></tr>
+<tr><td>17</td><td>First Aid Leaflet</td><td>1 Nos</td><td>1 Nos</td></tr>
 
 </table>
+
+
+<div class="form-box">
+
+<h3>Report First Aid Item Used</h3>
+
+<input type="text" id="item" placeholder="Item Used">
+
+<input type="text" id="qty" placeholder="Quantity Used">
+
+<input type="text" id="name" placeholder="Used By">
+
+<input type="text" id="location" placeholder="First Aid Location">
+
+<button onclick="sendMail()">Submit</button>
+
+</div>
 
 </div>
 
 </body>
+
 </html>
