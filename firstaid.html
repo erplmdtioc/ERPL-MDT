@@ -88,7 +88,7 @@ background:#084298;
 
 <script>
 
-function sendMail(){
+function sendWhatsApp(){
 
 var item = document.getElementById("item").value;
 var qty = document.getElementById("qty").value;
@@ -100,14 +100,17 @@ alert("Please fill all fields");
 return;
 }
 
-var subject = "First Aid Box Item Used";
+var message =
+"🩹 FIRST AID ITEM USED%0A%0A" +
+"📦 Item : " + item + "%0A" +
+"🔢 Quantity : " + qty + "%0A" +
+"👤 Used By : " + name + "%0A" +
+"📍 Location : " + location;
 
-var body = "First Aid Item Used : " + item +
-"%0D%0AQuantity : " + qty +
-"%0D%0AUsed By : " + name +
-"%0D%0AFirst Aid Location : " + location;
-
-window.location.href="mailto:dasbj1@indianoil.in?subject="+subject+"&body="+body;
+window.open(
+"https://wa.me/918724961769?text=" + message,
+"_blank"
+);
 
 }
 
@@ -165,7 +168,7 @@ window.location.href="mailto:dasbj1@indianoil.in?subject="+subject+"&body="+body
 
 <input type="text" id="location" placeholder="First Aid Location">
 
-<button onclick="sendMail()">Submit</button>
+<button onclick="sendWhatsApp()">Send WhatsApp Notification</button>
 
 </div>
 
